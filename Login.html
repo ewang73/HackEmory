@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<?php
+   ob_start();
+   session_start();
+?>
+
+<?
+   // error_reporting(E_ALL);
+   // ini_set("display_errors", 1);
+?>
+
+
 <html>
 <head>
 <title>GThub Login</title>
@@ -16,28 +28,8 @@ Welcome to GThub! <br><br>
 Please login with your existing username and password.
 </p>
 
-<?php
-      $msg = '';
-            
-            if (isset($_POST['login']) && !empty($_POST['username']) 
-               && !empty($_POST['password'])) {
-				
-               if ($_POST['username'] == 'tutorialspoint' && 
-                  $_POST['password'] == '1234') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'tutorialspoint';
-                  
-                  echo 'You have entered valid use name and password';
-               }else {
-                  $msg = 'Wrong username or password';
-               }
-            }
-         ?>
-
          
-<form method ='post' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>">
+<form method ='post' >
     Username:<br>
     <input type = 'test' name = 'username' required placeholder = 'Username'><br>
     Password:<br>
@@ -55,6 +47,7 @@ Don't have an account?
 
 <a href = "file:///C:/Users/andre/OneDrive/Documents/~CS%201301/HackEmory/GetStarted.html">
     <button class='button'><span>Register here</span></button></a>
+
 
 
 </body>
