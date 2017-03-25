@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GThub Login</title>
+<link rel='stylesheet' type = 'text/css' href = 'HomePage.css'>
+</head>
+<body>
+
+<h2>
+Log In
+</h2>
+
+<p>
+Welcome to GThub! <br>
+Please login with your existing username and password.
+</p>
+
+<?php
+      $msg = '';
+            
+            if (isset($_POST['login']) && !empty($_POST['username']) 
+               && !empty($_POST['password'])) {
+				
+               if ($_POST['username'] == 'tutorialspoint' && 
+                  $_POST['password'] == '1234') {
+                  $_SESSION['valid'] = true;
+                  $_SESSION['timeout'] = time();
+                  $_SESSION['username'] = 'tutorialspoint';
+                  
+                  echo 'You have entered valid use name and password';
+               }else {
+                  $msg = 'Wrong username or password';
+               }
+            }
+         ?>
+
+         
+<form method ='post' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+            ?>">
+    Username:<br>
+    <input type = 'test' name = 'username' required placeholder = 'Username'><br>
+    Password:<br>
+    <input type='password' name ='password' placeholder = 'Password' required><br><br>
+    <input type ='submit' value='Log in'>
+    
+</form>
+</body>
+</html>
