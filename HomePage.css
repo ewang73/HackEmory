@@ -8,5 +8,81 @@ h1 {
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 3.3em;
-	color: black;
+	color: white;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+
+/*THIS IS THE BUTTONS FOR "HOMEPAGE"*/
+button {
+  border-radius: 4px;
+  background-color: orange;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 26px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {background-color: #FF4400}  
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*END BUTTON COMMANDS FOR "HOMEPAGE"*/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 49; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: orange; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 1em;
+    width: 100px;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
