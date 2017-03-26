@@ -1,13 +1,13 @@
 body {
 	background-color: skyblue;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: "Karla", sans-serif;
 	text-align: center;
 }
 
 h1 {
 	text-align: center;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 3.3em;
+	font-family: "Karla", sans-serif;
+	font-size: 3.5em;
 	color: white;
 }
 
@@ -23,6 +23,10 @@ p {
   margin-right: 12%;
 }
 
+#description {
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 /*THIS IS THE BUTTONS FOR "HOMEPAGE"*/
 button {
@@ -39,7 +43,7 @@ button {
   margin: 5px;
 }
 
-button:hover {background-color: #FF4400}  
+button:hover {background-color: gold}  
 
 button span {
   cursor: pointer;
@@ -116,6 +120,13 @@ button:hover span:after {
   margin: 4px;
 }
 
+#contact {
+  font-size: 20px;
+  padding: 10px;
+  width: 125px;
+  margin: 4px;  
+}
+
 input {
     width: 10%;
     margin: 8px ;
@@ -127,4 +138,87 @@ input {
 
 form {
   color: white;
+}
+
+/*ABOUT THE CREATORS*/
+*, *:before, *:after {
+  box-sizing: inherit;
+  alignment-baseline: central;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  align-self: center;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .column {
+    width: 80%;
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  align-self: center;
+}
+
+.container {
+  padding: 0 10px;
+  align-content: center;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  background-color: lightgrey;
+  align-self: center;
+}
+
+.title {
+  color: gold;
+  text-align: center;
+}
+
+#contacttext {
+  font-size: 12px;
+}
+
+/*PARALLAX*/
+.parallax { 
+    /* The image used */
+    background-image: url("parallax1.jpeg");
+
+    /* Set a specific height */
+    height: 400px; 
+    background-color: transparent;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+#tech1 {
+    background-image: url("tech1.png");
+}
+
+#tech2 {
+    background-image: url("tech2.jpeg");
+}
+
+#tech3 {
+    background-image: url("tech3.png");
 }
