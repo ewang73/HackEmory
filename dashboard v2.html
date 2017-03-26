@@ -24,25 +24,24 @@
 	  <div id="Chatroom" class="tab-pane fade in active">
 	    <h3 style="">Chatroom</h3>
 	    <p>The Chatroom is where you can chat with classmates!</p>
-	  </div>
-	  <div id="Calendar" class="tab-pane fade">
+	</div>
+	<div id="Calendar" class="tab-pane fade">
 	    <h3>Calendar</h3>
 	    <p>Share events for the class in the Calendar!</p>
 	    <iframe src="https://calendar.google.com/calendar/embed?src=lci64sv591fb8rk5cg0hr738es%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-	  </div>
-	  <div id="WORD" class="tab-pane fade">
+	</div>
+	<div id="WORD" class="tab-pane fade">
 	    <h3>WORD</h3>
 	    <p>Upload and see others' notes in WORD. Click the button to choose a
 	    file </p>
-	    <button onclick="myFunction()">Try it</button>
+	    <input type="file" id="myFile">
 		<script>
 		function myFunction() {
-		    var x = document.createElement("INPUT");
-		    x.setAttribute("type", "file");
-		    document.body.appendChild(x);
+		    var x = document.getElementById("myFile");
+		    x.disabled = true;
 		}
 		</script>
-	  </div>
+	</div>
 	  <div id="Practice" class="tab-pane fade">
 	    <h3>Practice</h3>
 	    <p>Collaborate on quizzes and games to Practice.</p>
