@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-   ob_start();
-   session_start();
-?>
-
-<?
-   // error_reporting(E_ALL);
-   // ini_set("display_errors", 1);
-?>
-
-
 <html>
 <head>
 <title>GThub Login</title>
@@ -31,7 +19,7 @@ Please login with your existing username and password.
          
 <form method ='post' >
     Username:<br>
-    <input type = 'test' name = 'username' required placeholder = 'Username'><br>
+    <input type = 'text' name = 'username' required placeholder = 'Username'><br>
     Password:<br>
     <input type='password' name ='password' placeholder = 'Password' required><br><br>
     <!-- <input type ='submit' value='Log in'> -->
